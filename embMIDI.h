@@ -92,6 +92,7 @@ unsigned int outsamplerate;
 void lwsynth_init(unsigned int samplerate){
 	int i=0;
 	outsamplerate=samplerate;
+	memset(channels,0,sizeof(channels));
 	for(i=0;i<16;i++){
 		midichannels[i].volume=100;
 		midichannels[i].pitchbend=8192;
